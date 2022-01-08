@@ -2,6 +2,8 @@ package com.example.hobbitron.hobbit;
 
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class HobbitService {
 
@@ -9,5 +11,9 @@ public class HobbitService {
 
     public HobbitService(HobbitRepository hobbitRepository) {
         this.hobbitRepository = hobbitRepository;
+    }
+
+    public List<Hobbit> findAll() {
+        return hobbitRepository.findAll();
     }
 }
